@@ -14,6 +14,10 @@ function writePassword() {
   passwordText.value = password;
 }
 
+//Added a variable for the randomly generated password.
+var genPassword = "";
+
+//This function will set up all of my alerts and tell the user what kin of characters will be in the password.
 function generatePassword() {
 
   var charList = "";
@@ -55,7 +59,20 @@ function generatePassword() {
   if (isSpecial) {
     charList += specialChar;
   }
-  return charList;
+  // return charList;
+
+  // Randomly generates password for user determined length
+  for (i = 0; i < passwordLength; i++) {
+  genPassword += charList.charAt(Math.floor(Math.random() * charList.length));
+  }
+if (genPassword==""){
+  var error = "Try again!";
+  return error
 }
+  return genPassword;
+  
+}
+
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
