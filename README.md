@@ -1,2 +1,3 @@
 # password-generator-
 This is my project module 03 where I will be setting up a password generator.
+I did this project to boost my knowledge of JavaScript and test out what I've learned this week. I had trouble near the end when I had all of my alerts set up and the generator was just printing every possible character. I added a for loop that ended up solving that issue and printing a random password. I gained a much better understanding of if statemnts than i had before doing this project.
